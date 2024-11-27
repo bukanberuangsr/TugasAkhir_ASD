@@ -7,6 +7,14 @@
 * Program Studi: Teknologi Informasi
 * Mata Kuliah: Algoritma dan Struktur Data
 
-## Deskripsi Program
+## Aplikasi sortir data Mahasiswa
 
-Program blablabla (isi sendiri)
+Aplikasi berbasis terminal ini merupakan sebuah program yang dirancang untuk mengelola data mahasiswa. Program ini dibuat dengan menggunakan bahasa Java.
+
+## Fitur aplikasi
+
+Aplikasi ini memiliki daftar fitur sebagai berikut:
+
+* Memasukkan data mahasiswa secara manual
+* memilih metode sortiran (Bubble sort atau Insertion Sort)
+* memilih 
