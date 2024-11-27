@@ -1,3 +1,4 @@
+import java.nio.channels.Pipe.SourceChannel;
 import java.util.*;
 
 public class App {
@@ -26,6 +27,7 @@ public class App {
                 String prodi = sc.nextLine();
                 ll.add(new Mahasiswa(nim, nama, prodi));
             } else if (input == 2) {
+                System.out.println("\nH");
                 System.out.println("\nDaftar Mahasiswa:");
                 for (Mahasiswa mhs : ll) {
                     System.out.println(mhs);
@@ -45,9 +47,9 @@ public class App {
         do {
             swapped = false;
             for (int i = 0; i < list.size(); i++) {
-                if (list.get(i) > list.get( + 1)) {
+                if (list.get(i).nim > list.get( + 1).nim) {
                     swapped = true;
-                    int temp = list.get(i);
+                    Mahasiswa temp = list.get(i);
                     list.set(i, list.get(i + 1));
                     list.set(i + 1, temp);
                 }
@@ -59,9 +61,9 @@ public class App {
     // ! Belum berfungsi
     private static void insertionSort(LinkedList<Mahasiswa> list){
         for (int i = 1; i < list.size(); i++) {
-            int key = list.get(i);
+            Mahasiswa key = list.get(i);
             int j = i-1;
-            while (j>=0 && list.get(j) > key) {
+            while (j>=0 && list.get(j).nim > key.nim) {
                 list.set(j+1, list.get(j));
                 j--;
             }
