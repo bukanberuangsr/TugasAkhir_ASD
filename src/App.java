@@ -62,13 +62,12 @@ public class App {
                     } else {
                         System.out.println("Metode tidak valid!");
                     }
+                    System.out.println("\n=== Daftar Mahasiswa (sortir) ===");
+                    printData(ll);
 
                 } else if (diurutkan.equalsIgnoreCase("t")) {
-                    System.out.println("\n=== Daftar Mahasiswa ===");
-                    System.out.println("\nNIM:\t\tNama:\t\t\tProgram Studi:");
-                    for (Mahasiswa mhs : ll) {
-                        System.out.println(mhs);
-                    }
+                    System.out.println("\n=== Daftar Mahasiswa` ===");
+                    printData(ll);
                 } else {
                     System.out.println("Input tidak valid! Silahkan coba lagi");
                 }
@@ -104,7 +103,7 @@ public class App {
                 }
             }
         } while (swapped);
-        System.out.println(list);
+        // System.out.println(list);
     }
 
     private static void insertionSort(LinkedList<Mahasiswa> list, int atribut) {
@@ -129,7 +128,14 @@ public class App {
             }
             list.set(j + 1, key);
         }
-        System.out.println(list);
+        // System.out.println(list);
+    }
+
+    private static void printData(LinkedList<Mahasiswa> ll) {
+        System.out.println("\nNIM:\t\tNama:\t\t\tProgram Studi:");
+        for (Mahasiswa mhs : ll) {
+            System.out.println(mhs);
+        }
     }
 
     // Untuk debugging
