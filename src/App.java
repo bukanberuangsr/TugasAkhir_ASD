@@ -11,6 +11,7 @@ public class App {
             System.out.println("\nMenu:");
             System.out.println("1. Masukkan data Mahasiswa");
             System.out.println("2. Lihat daftar Mahasiswa");
+            System.out.println("3. Hapus daftar Mahasiswa");
             System.out.println("0. Keluar");
             System.out.print("Masukkan pilihan anda: ");
             input = sc.nextInt();
@@ -46,7 +47,7 @@ public class App {
                     int metode = sc.nextInt();
                     sc.nextLine();
 
-                    System.out.println("Pilih atribut yang akan sortir");
+                    System.out.println("\nPilih atribut yang akan sortir");
                     System.out.println("1. NIM");
                     System.out.println("2. Nama");
                     System.out.println("3. Program Studi");
@@ -54,7 +55,6 @@ public class App {
                     int atributSortir = sc.nextInt();
                     sc.nextLine();
 
-                    // ! TODO: Benerin output list setelah sortir
                     if (metode == 1) {
                         bubbleSort(ll, atributSortir);
                     } else if (metode == 2) {
@@ -74,6 +74,20 @@ public class App {
 
             } else if (input == 0) {
                 System.out.println("\nProgram dihentikan.");
+            } else if (input == 3) {
+                if (ll.isEmpty()) {
+                    System.out.println("List mahasiswa masih kosong, tidak ada yang bisa dihapus");
+                }
+                System.out.print("Masukkan indeks mahasiswa yang ingin dihapus: ");
+                int indeks = sc.nextInt();
+                sc.nextLine();
+
+                if (indeks < 0 || indeks > ll.size()) {
+                    System.out.println("Indeks tidak valid, silahkan coba lagi");
+                }
+                Mahasiswa hapusData = ll.remove(indeks);
+                System.out.println("Data mahasiswa berikut berhasil dihapus");
+                System.out.println(hapusData.nim + " " + hapusData.nama + " " + hapusData.programStudi);
             } else {
                 System.out.println("Input tidak valid! Silahkan coba lagi");
             }
@@ -103,7 +117,6 @@ public class App {
                 }
             }
         } while (swapped);
-        // System.out.println(list);
     }
 
     private static void insertionSort(LinkedList<Mahasiswa> list, int atribut) {
@@ -128,7 +141,6 @@ public class App {
             }
             list.set(j + 1, key);
         }
-        // System.out.println(list);
     }
 
     private static void printData(LinkedList<Mahasiswa> ll) {
@@ -148,15 +160,12 @@ public class App {
         ll.add(new Mahasiswa(22012, "Nadiya I", "Teknik Elektro"));
         ll.add(new Mahasiswa(23010, "Zeinnita Y", "Teknik Elektro"));
         ll.add(new Mahasiswa(21002, "Rendra A", "Ilmu Ekonomi"));
-        ll.add(new Mahasiswa(24001, "Aditya Prasetyo", "Teknik Informatika"));
-        ll.add(new Mahasiswa(24002, "Dewi Lestari", "Ilmu Komputer"));
         ll.add(new Mahasiswa(24003, "Bayu Saputra", "Sistem Informasi"));
-        ll.add(new Mahasiswa(24004, "Siti Nurhaliza", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(24005, "Rizky Fadillah", "Teknik Komputer"));
+        ll.add(new Mahasiswa(22004, "Siti Nurhaliza", "Teknologi Informasi"));
         ll.add(new Mahasiswa(24006, "Nabila Rahma", "Teknik Elektro"));
-        ll.add(new Mahasiswa(24007, "Fahmi Alamsyah", "Sistem Informasi"));
+        ll.add(new Mahasiswa(21007, "Fahmi Alamsyah", "Sistem Informasi"));
         ll.add(new Mahasiswa(24008, "Putri Ananda", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(24009, "Hendra Wijaya", "Ilmu Ekonomi"));
+        ll.add(new Mahasiswa(21009, "Hendra Wijaya", "Ilmu Ekonomi"));
         ll.add(new Mahasiswa(24010, "Ayu Kartika", "Teknik Informatika"));
     }
 }
