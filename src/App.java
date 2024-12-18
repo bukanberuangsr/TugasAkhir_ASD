@@ -5,7 +5,6 @@ public class App {
         LinkedList<Mahasiswa> ll = new LinkedList<>();
         Scanner sc = new Scanner(System.in);
         int input;
-        generateData(ll);
 
         do {
             System.out.println("\nMenu:");
@@ -148,24 +147,5 @@ public class App {
         for (Mahasiswa mhs : ll) {
             System.out.println(mhs);
         }
-    }
-
-    // Untuk debugging
-    private static void generateData(LinkedList<Mahasiswa> ll) {
-        ll.add(new Mahasiswa(23013, "Akhtar Hafiz P", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(23001, "M Gilang H", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(23004, "Nadiyatun Nur A", "Teknik Informatika"));
-        ll.add(new Mahasiswa(21003, "Rahmat Effendi", "Teknik Komputer"));
-        ll.add(new Mahasiswa(23020, "Kinky Maylana P", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(22012, "Nadiya I", "Teknik Elektro"));
-        ll.add(new Mahasiswa(23010, "Zeinnita Y", "Teknik Elektro"));
-        ll.add(new Mahasiswa(21002, "Rendra A", "Ilmu Ekonomi"));
-        ll.add(new Mahasiswa(24003, "Bayu Saputra", "Sistem Informasi"));
-        ll.add(new Mahasiswa(22004, "Siti Nurhaliza", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(24006, "Nabila Rahma", "Teknik Elektro"));
-        ll.add(new Mahasiswa(21007, "Fahmi Alamsyah", "Sistem Informasi"));
-        ll.add(new Mahasiswa(24008, "Putri Ananda", "Teknologi Informasi"));
-        ll.add(new Mahasiswa(21009, "Hendra Wijaya", "Ilmu Ekonomi"));
-        ll.add(new Mahasiswa(24010, "Ayu Kartika", "Teknik Informatika"));
     }
 }
